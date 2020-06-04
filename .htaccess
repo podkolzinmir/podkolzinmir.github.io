@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "This is password protected"
-AuthUserFile .htpasswd
+AuthUserFile C:\Users\Miriam\podkolzinmir.github.io\.htpasswd
 require valid-user 
