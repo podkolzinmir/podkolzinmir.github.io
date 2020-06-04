@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "This is password protected"
-AuthUserFile https://github.com/podkolzinmir/podkolzinmir.github.io/blob/master/.htpasswd
-require valid-user 
