@@ -28,7 +28,7 @@ function drawChart() {
 var name = " ";
 var big = " ";
 
-  for (i = 0; i < 5; i++){
+  
   name =  $('#chart_div').sheetrock({
         url: mySpreadsheet,
         query: "select C",
@@ -45,7 +45,7 @@ var big = " ";
        [name, big]
       ]);
     
-  }
+  
 
 
 
