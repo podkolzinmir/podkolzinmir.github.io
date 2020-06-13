@@ -8,12 +8,7 @@
 // Define spreadsheet URL.
 var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1qT1LyvoAcb0HTsi2rHBltBVpUBumAUzT__rhMvrz5Rk/edit#gid=0';
 
-// Load top ten switch hitters.
-$('#chart_div').sheetrock({
-  url: mySpreadsheet,
-  query: "select A,B,C,D where D = 'Brown' ",
-  fetchSize: 10
-});
+
 
 
 // making a tree
@@ -24,7 +19,7 @@ function drawChart() {
   var data = new google.visualization.DataTable();
   data.addColumn('string', 'Name');
   data.addColumn('string', 'Big');
-
+  
 var name = " ";
 var big = " ";
 
