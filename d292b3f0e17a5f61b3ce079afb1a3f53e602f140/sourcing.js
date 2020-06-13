@@ -9,7 +9,7 @@
 var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1qT1LyvoAcb0HTsi2rHBltBVpUBumAUzT__rhMvrz5Rk/edit#gid=0';
 
 // Load top ten switch hitters.
-$('#switch-hitters').sheetrock({
+$('#chart_div').sheetrock({
   url: mySpreadsheet,
   query: "select A,B,C,D where D = 'Brown' ",
   fetchSize: 10
@@ -25,13 +25,33 @@ function drawChart() {
   data.addColumn('string', 'Name');
   data.addColumn('string', 'Big');
 
-  // For each orgchart box, provide the name, manager, and tooltip to show.
-  data.addRows([
-    ['Mike',''],
-    ['Jim','Mike'],
-    ['Alice', 'Mike'],
-    ['Bob', 'Jim']
-  ]);
+var name = " ";
+var big = " ";
+
+  for (i = 0; i < 5; i++){
+  name =  $('#chart_div').sheetrock({
+        url: mySpreadsheet,
+        query: "select C",
+        fetchSize: 1
+      }); 
+
+    big =  $('#chart_div').sheetrock({
+        url: mySpreadsheet,
+        query: "select D",
+        fetchSize: 1
+      }); 
+
+      data.addRows([
+       [name, big]
+      ]);
+    
+  }
+
+
+  
+
+  
+
 
   // Create the chart.
   var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
