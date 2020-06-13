@@ -31,7 +31,6 @@ function drawChart() {
     ['Jim','Mike'],
     ['Alice', 'Mike'],
     ['Bob', 'Jim']
-    ['Carol', 'Bob']
   ]);
 
   // Create the chart.
