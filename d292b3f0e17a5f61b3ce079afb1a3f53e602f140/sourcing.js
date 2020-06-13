@@ -32,13 +32,13 @@ var big = " ";
   name =  $('#chart_div').sheetrock({
         url: mySpreadsheet,
         query: "select C",
-        fetchSize: 1
+        fetchSize: 5
       }); 
 
     big =  $('#chart_div').sheetrock({
         url: mySpreadsheet,
         query: "select D",
-        fetchSize: 1
+        fetchSize: 5
       }); 
 
       data.addRows([
@@ -47,10 +47,6 @@ var big = " ";
     
   }
 
-
-  
-
-  
 
 
   // Create the chart.
