@@ -17,37 +17,50 @@ google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
         var data = new google.visualization.DataTable();
-       /* data.addColumn('string', 'Name');
+        data.addColumn('string', 'Name');
         data.addColumn('string', 'Manager');
         data.addColumn('string', 'ToolTip');
 
-        var j = "Jessica";
-        var julia = "julia";
-        var katie = "katie";
-        var briana = "briana";
-        var miriam = "miriam";
-        var d = "dani";*/
+        var j = "Jess Giangrande";
+        var julia = "Julia Earl";
+        var katie = "Katie Tirabassi";
+        var briana = "Briana Maetta";
+        var miriam = "Miriam Podkolzin";
+        var d = "Dani Ragan";
 
-       
-
-        // data from google sheet
-        $('#chart_div').sheetrock({
-          url: mySpreadsheet,
-          query: "select C, D",
-          fetchSize: 5
-        });
+    
 
         // For each orgchart box, provide the name, manager, and tooltip to show.
-     /*   data.addRows([
-         [j, "", "gbig"],
+       data.addRows([
+         [j, "Caitlyn Labonte", "gbig"],
          [julia, j, "big"],
          [katie, j, "aunt"],
          [briana, katie, " "],
          [miriam, julia, " "],
-         [d, miriam, "little"]
+         [d, miriam, "little"],
+         ["Caitlyn Labonte", "Michelle Plotzker"],
+         ["Michelle Plotzker", "Sarah Byrne"],
+         ["Sarah Byrne, Shannon McGrath"],
+         ["Shannon McGrath", "Erica Carpenter"],
+         ["Erica Carpenter","Elizabeth Bakarich"],
+         ["Elizabeth Bakarich", "Poonam Shah"],
+         ["Poonam Shah", "Christina Lombardi"],
+         ["Christina Lombardi", "Sandra Desmond"],
+         ["Sandra Desmond", "Dana Wambser"],
+         ["Dana Wambser", "Lauren Barron"],
+         ["Lauren Barron", "Sharon Bellask"],
+         ["Sharon Bellask", "Maria Lopez"],
+         ["Maria Lopez", "Annabella Molina"],
+         ["Annabella Molina", "Kristen Johnson"],
+         ["Kristen Johnson", "Kelly Lettler"],
+         ["Kelly Lettler", "Rosemarie Witter"],
+         ["Rosemarie Witter", "Jude Van Decker"],
+         ["Judy Van Decker", ""]
+         ["Jackie Hilt", "Elizabeth Bakarich"]
+
         ]);
   
-*/
+
 
 
   // Create the chart.
