@@ -28,9 +28,16 @@ google.charts.setOnLoadCallback(drawChart);
         var miriam = "miriam";
         var d = "dani";
 
+        var d = sheetrock({
+            url: mySpreadsheet,
+            query: "select C",
+            fetchsize: 1
+
+        });
+
         // For each orgchart box, provide the name, manager, and tooltip to show.
         data.addRows([
-         [j, " ", "gbig"],
+         [j, "", "gbig"],
          [julia, j, "big"],
          [katie, j, "aunt"],
          [briana, katie, " "],
