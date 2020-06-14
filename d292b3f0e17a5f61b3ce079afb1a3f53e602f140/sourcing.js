@@ -19,7 +19,6 @@ google.charts.setOnLoadCallback(drawChart);
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Name');
         data.addColumn('string', 'Manager');
-        data.addColumn('string', 'ToolTip');
 
         var j = "Jess Giangrande";
         var julia = "Julia Earl";
@@ -32,12 +31,12 @@ google.charts.setOnLoadCallback(drawChart);
 
         // For each orgchart box, provide the name, manager, and tooltip to show.
        data.addRows([
-         [j, "Caitlyn Labonte", "gbig"],
-         [julia, j, "big"],
-         [katie, j, "aunt"],
-         [briana, katie, " "],
-         [miriam, julia, " "],
-         [d, miriam, "little"],
+         [j, "Caitlyn Labonte"],
+         [julia, j],
+         [katie, j],
+         [briana, katie],
+         [miriam, julia],
+         [d, miriam],
          ["Caitlyn Labonte", "Michelle Plotzker"],
          ["Michelle Plotzker", "Sarah Byrne"],
          ["Sarah Byrne, Shannon McGrath"],
@@ -55,7 +54,7 @@ google.charts.setOnLoadCallback(drawChart);
          ["Kristen Johnson", "Kelly Lettler"],
          ["Kelly Lettler", "Rosemarie Witter"],
          ["Rosemarie Witter", "Jude Van Decker"],
-         ["Judy Van Decker", ""]
+         ["Judy Van Decker", ""],
          ["Jackie Hilt", "Elizabeth Bakarich"]
 
         ]);
