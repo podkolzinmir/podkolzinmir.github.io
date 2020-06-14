@@ -15,31 +15,28 @@ var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1qT1LyvoAcb0HTsi2rHB
 google.charts.load('current', {packages:["orgchart"]});
 google.charts.setOnLoadCallback(drawChart);
 
-function drawChart() {
-  var data = new google.visualization.DataTable();
-  data.addColumn('string', 'Name');
-  data.addColumn('string', 'Big');
-  
-var name = " ";
-var big = " ";
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+        data.addColumn('string', 'ToolTip');
 
-  
-  name =  $('#chart_div').sheetrock({
-        url: mySpreadsheet,
-        query: "select C",
-        fetchSize: 5
-      }); 
+        var j = "Jessica";
+        var julia = "julia";
+        var katie = "katie";
+        var briana = "briana";
+        var miriam = "miriam";
+        var d = "dani";
 
-    big =  $('#chart_div').sheetrock({
-        url: mySpreadsheet,
-        query: "select D",
-        fetchSize: 5
-      }); 
-
-      data.addRows([
-       [name, big]
-      ]);
-    
+        // For each orgchart box, provide the name, manager, and tooltip to show.
+        data.addRows([
+         [j, " ", "gbig"],
+         [julia, j, "big"],
+         [katie, j, "aunt"],
+         [briana, katie, " "],
+         [miriam, julia, " "],
+         [d, miriam, "little"]
+        ]);
   
 
 
