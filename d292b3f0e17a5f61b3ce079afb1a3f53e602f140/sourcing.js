@@ -39,24 +39,8 @@ google.charts.setOnLoadCallback(drawChart);
          [d, miriam],
          ["Caitlyn Labonte", "Michelle Plotzker"],
          ["Michelle Plotzker", "Sarah Byrne"],
-         ["Sarah Byrne, Shannon McGrath"],
-         ["Shannon McGrath", "Erica Carpenter"],
-         ["Erica Carpenter","Elizabeth Bakarich"],
-         ["Elizabeth Bakarich", "Poonam Shah"],
-         ["Poonam Shah", "Christina Lombardi"],
-         ["Christina Lombardi", "Sandra Desmond"],
-         ["Sandra Desmond", "Dana Wambser"],
-         ["Dana Wambser", "Lauren Barron"],
-         ["Lauren Barron", "Sharon Bellask"],
-         ["Sharon Bellask", "Maria Lopez"],
-         ["Maria Lopez", "Annabella Molina"],
-         ["Annabella Molina", "Kristen Johnson"],
-         ["Kristen Johnson", "Kelly Lettler"],
-         ["Kelly Lettler", "Rosemarie Witter"],
-         ["Rosemarie Witter", "Jude Van Decker"],
-         ["Judy Van Decker", ""],
-         ["Jackie Hilt", "Elizabeth Bakarich"]
-
+         ["Sarah Byrne, Shannon McGrath"]
+        
         ]);
   
 
