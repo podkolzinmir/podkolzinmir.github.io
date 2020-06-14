@@ -17,7 +17,7 @@ google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
         var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Name');
+       /* data.addColumn('string', 'Name');
         data.addColumn('string', 'Manager');
         data.addColumn('string', 'ToolTip');
 
@@ -26,17 +26,19 @@ google.charts.setOnLoadCallback(drawChart);
         var katie = "katie";
         var briana = "briana";
         var miriam = "miriam";
-        var d = "dani";
+        var d = "dani";*/
 
-        var d = sheetrock({
-            url: mySpreadsheet,
-            query: "select C",
-            fetchsize: 1
+       
 
+        // data from google sheet
+        $('#chart_div').sheetrock({
+          url: mySpreadsheet,
+          query: "select C, D",
+          fetchSize: 5
         });
 
         // For each orgchart box, provide the name, manager, and tooltip to show.
-        data.addRows([
+     /*   data.addRows([
          [j, "", "gbig"],
          [julia, j, "big"],
          [katie, j, "aunt"],
@@ -45,7 +47,7 @@ google.charts.setOnLoadCallback(drawChart);
          [d, miriam, "little"]
         ]);
   
-
+*/
 
 
   // Create the chart.
