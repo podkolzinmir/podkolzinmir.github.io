@@ -6,7 +6,7 @@
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Name');
         data.addColumn('string', 'Manager');
-       // data.addColumn('string', 'ToolTip');
+        data.addColumn('string', 'ToolTip');
 
         // For each orgchart box, provide the name, manager, and tooltip to show.
         data.addRows([
