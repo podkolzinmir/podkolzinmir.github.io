@@ -26,7 +26,7 @@
          ['Christina Lombardi', 'Sandra Desmond',''],
          ['Sandra Desmond', 'Dana Wambser',''],
          ['Dana Wambser', 'Lauren Barron',''],
-         ['Lauren Barrom', 'Sharon Bellask',''],
+         ['Lauren Barron', 'Sharon Bellask',''],
          ['Sharon Bellask', 'Maria Lopez',''],
          ['Maria Lopez', 'Annabella Molina',''],
          ['Annabella Molina', 'Kristen Johnson',''],
