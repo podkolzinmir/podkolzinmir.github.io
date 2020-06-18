@@ -1,47 +1,28 @@
+google.charts.load('current', {packages:["orgchart"]});
+google.charts.setOnLoadCallback(drawChart);
 
-       google.charts.load('current', {packages:["orgchart"]});
-      google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+  
+var queryString = encodeURIComponent('SELECT A,B');
 
-      function drawChart() {
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Name');
-        data.addColumn('string', 'Manager');
-        data.addColumn('string', 'ToolTip');
+var query = new google.visualization.Query(
+    'https://docs.google.com/spreadsheets/d/1H_wHTebESvSYJC-nvpaz3BosebC_mpY4Z7lFoKO4Zkc/edit#gid=0' + queryString);
+query.send(handleSampleDataQueryResponse);
+}
 
-        // For each orgchart box, provide the name, manager, and tooltip to show.
-        data.addRows([
-       ['Jessica Giangrande','Caitlyn Labonte',''],
-         ['Julia Earl', 'Jessica Giangrande',''],
-         ['Katie Tirabassi', 'Jessica Giangrande',''],
-         ['Briana Maetta', 'Katie Tirabassi',''],
-         ['Miriam Podkolzin', 'Julia Earl',''],
-         ['Dani Ragan', 'Miriam Podkolzin',''],
-         ['Caitlyn Labonte', 'Michelle Plotzker',''],
-         ['Michelle Plotzker', 'Sarah Byrne',''],
-         ['Sarah Byrne', 'Shannon McGrath',''],
-          ['Shannon McGrath', 'Erica Carpenter',''],
-         ['Erica Carpenter','Elizabeth Bakarich',''],
-         ['Elizabeth Bakarich', 'Poonam Shah',''],
-         ['Poonam Shah', 'Christina Lombardi',''],
-         ['Christina Lombardi', 'Sandra Desmond',''],
-         ['Sandra Desmond', 'Dana Wambser',''],
-         ['Dana Wambser', 'Lauren Barron',''],
-         ['Lauren Barron', 'Sharon Bellask',''],
-         ['Sharon Bellask', 'Maria Lopez',''],
-         ['Maria Lopez', 'Annabella Molina',''],
-         ['Annabella Molina', 'Kristen Johnson',''],
-         ['Kristen Johnson', 'Kelly Lettler',''],
-         ['Kelly Lettler', 'Rosemarie Witter',''],
-         ['Rosemarie Witter', 'Judy Van Decker',''],
-         ['Judy Van Decker', '',''],
-         ['Jackie Hilt', 'Elizabeth Bakarich','']
-    
-        
-        ]);
+function handleSampleDataQueryResponse(response) {
+if (response.isError()) {
+  alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+  return;
+}
 
-        // Create the chart.
-        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
-        // Draw the chart, setting the allowHtml option to true for the tooltips.
-        chart.draw(data, {'allowHtml':true});
-      }
- 
+
+var data = response.getDataTable();
+
+
+
+  // Create the chart.
+  var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+  // Draw the chart, setting the allowHtml option to true for the tooltips.
+  chart.draw(data, {'allowHtml':true});
+}
