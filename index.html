@@ -69,8 +69,8 @@ div.vertical {
 		<div class="horizontal">
 			<div class="vertical">
 				<div class="box">
-                 <text style = "color: #DAF7A6; font-family:georgia"> Enter the password </text> <br />
-					<input style="margin-top: 16px; margin-bottom: -2px; text-align: center;" id="password" type="password" placeholder="" /> 
+                 <text style = "color: #DAF7A6; font-family:georgia"> This is password protected </text> <br />
+					<input id = "inputBox" style="margin-top: 16px; margin-bottom: -2px; text-align: center;" id="password" type="password" placeholder="" /> 
                     <br />
           
 					<text id="wrongPassword" style="display: none; color:#7f0000;  font-size: 10px"> Wrong password </text> <br /> <br/>
@@ -132,6 +132,10 @@ div.vertical {
 		}
 	});
 	$("#password").focus();
+
+	$("inputBox").focus(function(){
+   		$(this).siblings("WrongPassword").hide();
+	});
 
 	</script>
 
