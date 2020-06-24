@@ -6,12 +6,13 @@ google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
   
-var queryString = encodeURIComponent('SELECT A,B,C limit 14 OFFSET 339');
+    var queryString = encodeURIComponent('SELECT A,B,C WHERE D contains "jvd" OFFSET 1');
 
-var query = new google.visualization.Query(
-    'https://docs.google.com/spreadsheets/d/1H_wHTebESvSYJC-nvpaz3BosebC_mpY4Z7lFoKO4Zkc/gviz/tq?tq=' + queryString);
-query.send(handleSampleDataQueryResponse);
-}
+    var query = new google.visualization.Query(
+        'https://docs.google.com/spreadsheets/d/1H_wHTebESvSYJC-nvpaz3BosebC_mpY4Z7lFoKO4Zkc/gviz/tq?tq=' + queryString);
+    query.send(handleSampleDataQueryResponse);
+    }
+    
 
 function handleSampleDataQueryResponse(response) {
 if (response.isError()) {
